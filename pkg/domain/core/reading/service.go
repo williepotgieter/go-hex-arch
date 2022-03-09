@@ -22,10 +22,12 @@ func NewETLService(etl ETL) ETLService {
 // Database service setup
 type Database interface {
 	GetAllTodos() []models.Todo
+	GetAllDatasets() []models.Dataset
 }
 
 type DatabaseService interface {
 	Todos() []models.Todo
+	Datasets() []models.Dataset
 }
 
 type dbservice struct {
